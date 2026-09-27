@@ -22,6 +22,11 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAJAAoAAAAAAAAAAQANAAsAAAAAAAAAAgAIAA0AAAAAAAAABgA=")
 tile_set = ExtResource("1_vn077")
 
+[node name="Overgrowth" type="TileMapLayer" parent="GameTileMap" unique_id=510963380]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAOAA0ABQADAAAAAAANAAkABQAIAAIAAAARAA0ABQAFAAMAAAATAA0ABQAHAAMAAAAcAA4ABQAEAAIAAAAaAA4ABQADAAIAAAAeAA4ABQAFAAIAAAA=")
+tile_set = ExtResource("1_vn077")
+
 [node name="Undergrowth" type="TileMapLayer" parent="GameTileMap" unique_id=530319603]
 tile_map_data = PackedByteArray("AAAQAAkABQAFAAAAAAASAAkABQAFAAAAAAAUAAoABQAGAAEAAAATAAoABQAGAAEAAAASAAsABQAGAAEAAAAVAAsABQAGAAEAAAAYAAwABQAHAAAAAAAZAAoABQAIAAAAAAA=")
 tile_set = ExtResource("1_vn077")
