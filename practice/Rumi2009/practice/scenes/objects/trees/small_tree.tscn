@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chw84yi0o0mbc"]
 
 [ext_resource type="Texture2D" uid="uid://crleumtmfhjvr" path="res://assests/game/objects/basic_grass_biom_things.png" id="1_a8qts"]
-[ext_resource type="Shader" uid="uid://diqa316gbguce" path="res://scenes/objects/trees/tree_shake.gdshader" id="1_w057i"]
+[ext_resource type="Shader" uid="uid://diqa316gbguce" path="res://scenes/objects/shake.gdshader" id="1_w057i"]
 [ext_resource type="Script" uid="uid://cdjry8bvder78" path="res://scenes/objects/trees/small_tree.gd" id="2_g5iuu"]
 [ext_resource type="PackedScene" uid="uid://cw61y72w0bbme" path="res://scenes/components/hurt_component.tscn" id="2_xyb6m"]
 [ext_resource type="PackedScene" uid="uid://bdetv67mmxkvv" path="res://scenes/components/damage_component.tscn" id="4_w057i"]
@@ -24,7 +24,6 @@ size = Vector2(10, 20)
 
 [node name="SmallTree" type="Sprite2D" unique_id=1519135333]
 material = SubResource("ShaderMaterial_uwku7")
-position = Vector2(0, -10)
 texture = SubResource("AtlasTexture_pi5w0")
 script = ExtResource("2_g5iuu")
 
