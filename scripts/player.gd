@@ -6,7 +6,7 @@ class_name Player
 @export var base_speed: int = 400
 @export var sprint_speed: int = 550
 
-@export var phone = "/PhoneSubViewportContainer"
+@onready var phone = $/PhoneSubViewportContainer
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var animation_playback: AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
