@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://da8grec7t6dk" path="res://assets/small-items02.png" id="4_85g3d"]
 [ext_resource type="PackedScene" uid="uid://05j133viwcy" path="res://interaction/interaction area/interactionArea.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://cp4wekc4b2bk" path="res://scripts/bedroom_door.gd" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bqh3sjxc27dgs" path="res://scenes/minigame_1.tscn" id="5_choun"]
 [ext_resource type="Script" uid="uid://jabi4qet686c" path="res://scripts/master_bedroom_door.gd" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://dvdolwnunmohh" path="res://scripts/bathroom_door.gd" id="7_o6xl0"]
 
@@ -362,6 +363,9 @@ texture = ExtResource("3_tipki")
 
 [sub_resource type="TileSet" id="TileSet_o6xl0"]
 sources/0 = SubResource("TileSetAtlasSource_85g3d")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ya4ey"]
+light_mode = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_o5qli")
@@ -1036,6 +1040,22 @@ y_sort_enabled = true
 texture_filter = 1
 position = Vector2(373.99442, 228.02441)
 scale = Vector2(4, 4)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="y-sort/player" unique_id=850844516]
+visible = false
+z_index = 4096
+material = SubResource("CanvasItemMaterial_ya4ey")
+offset_left = -74.498604
+offset_top = -42.506104
+offset_right = 75.501396
+offset_bottom = 47.493896
+
+[node name="SubViewport" type="SubViewport" parent="y-sort/player/SubViewportContainer" unique_id=2028277008]
+handle_input_locally = false
+size = Vector2i(150, 90)
+render_target_update_mode = 0
+
+[node name="minigame1" parent="y-sort/player/SubViewportContainer/SubViewport" unique_id=877077236 instance=ExtResource("5_choun")]
 
 [node name="walls" type="TileMapLayer" parent="y-sort" unique_id=1216736267]
 y_sort_enabled = true
