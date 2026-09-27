@@ -6,7 +6,7 @@ extends Control
 
 
 func _ready() -> void:
-	timer.start(5)
+	timer.start(20)
 
 
 func _process(_delta: float) -> void:

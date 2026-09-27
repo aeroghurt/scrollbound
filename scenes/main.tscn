@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://buaq673iyr04d"]
 
 [ext_resource type="Texture2D" uid="uid://be46vyybyl1hs" path="res://assets/floors-walls02.png" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://c4hm6qfoww05g" path="res://scenes/main.gd" id="1_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://5sgy0k2htp7b" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://du6lbdeo6jaoi" path="res://scenes/countdown.tscn" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://b01fn8ugyf1kh" path="res://assets/furniture03.png" id="3_tipki"]
@@ -1014,6 +1015,7 @@ size = Vector2(130.0219, 64.64581)
 
 [node name="main" type="Node2D" unique_id=183152306]
 texture_filter = 1
+script = ExtResource("1_ya4ey")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=304158390]
 
@@ -1041,8 +1043,7 @@ texture_filter = 1
 position = Vector2(373.99442, 228.02441)
 scale = Vector2(4, 4)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="y-sort/player" unique_id=850844516]
-visible = false
+[node name="PhoneSubViewportContainer" type="SubViewportContainer" parent="y-sort/player" unique_id=850844516]
 z_index = 4096
 material = SubResource("CanvasItemMaterial_ya4ey")
 offset_left = -74.498604
@@ -1050,12 +1051,12 @@ offset_top = -42.506104
 offset_right = 75.501396
 offset_bottom = 47.493896
 
-[node name="SubViewport" type="SubViewport" parent="y-sort/player/SubViewportContainer" unique_id=2028277008]
+[node name="PhoneSubViewport" type="SubViewport" parent="y-sort/player/PhoneSubViewportContainer" unique_id=2028277008]
 handle_input_locally = false
 size = Vector2i(150, 90)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
-[node name="minigame1" parent="y-sort/player/SubViewportContainer/SubViewport" unique_id=877077236 instance=ExtResource("5_choun")]
+[node name="minigame1" parent="y-sort/player/PhoneSubViewportContainer/PhoneSubViewport" unique_id=877077236 instance=ExtResource("5_choun")]
 
 [node name="walls" type="TileMapLayer" parent="y-sort" unique_id=1216736267]
 y_sort_enabled = true

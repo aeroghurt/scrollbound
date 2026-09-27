@@ -91,3 +91,8 @@ func draw_maze():
 
 func _on_button_pressed() -> void:
 	generate_maze()
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not is_visible_in_tree():
+		return

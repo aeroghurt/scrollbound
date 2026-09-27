@@ -15,5 +15,6 @@ func _physics_process(_delta: float) -> void:
 		velocity = input_dir.normalized() * speed
 	move_and_slide()
 
+
 func _input(_event: InputEvent) -> void:
 	input_dir = Input.get_vector("left", "right", "up", "down")
