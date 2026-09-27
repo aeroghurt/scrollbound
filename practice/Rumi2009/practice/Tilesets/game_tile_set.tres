@@ -1,6 +1,7 @@
 [gd_resource type="TileSet" format=3 uid="uid://dfy05x6lmyiva"]
 
 [ext_resource type="PackedScene" uid="uid://dwq461g1eao7k" path="res://scenes/houses/large_house.tscn" id="1_0b0mn"]
+[ext_resource type="PackedScene" uid="uid://03uavtgprg2m" path="res://scenes/objects/trees/large_tree.tscn" id="1_4agr7"]
 [ext_resource type="Texture2D" uid="uid://crxdmkfbed8cr" path="res://assests/game/tilesets/water.png" id="1_m70i2"]
 [ext_resource type="Texture2D" uid="uid://diqhktpwchaoo" path="res://assests/game/tilesets/grass.png" id="2_cbdxd"]
 [ext_resource type="PackedScene" uid="uid://viek8sa64jne" path="res://scenes/houses/medium_house.tscn" id="2_ow828"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://crleumtmfhjvr" path="res://assests/game/objects/basic_grass_biom_things.png" id="4_0b0mn"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_pi5w0"]
+scenes/1/scene = ExtResource("1_4agr7")
 scenes/3/scene = ExtResource("1_0b0mn")
 scenes/4/scene = ExtResource("2_ow828")
 scenes/6/scene = ExtResource("3_ow828")

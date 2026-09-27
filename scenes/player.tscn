@@ -210,13 +210,20 @@ states/walk/position = Vector2(605.38, 70.375)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_g2els"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_qhqgy"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_dqkch")]
 graph_offset = Vector2(20.219934, -38.625)
 
+[sub_resource type="Gradient" id="Gradient_g2els"]
+offsets = PackedFloat32Array(0.2593985, 0.5300752, 0.6729323)
+colors = PackedColorArray(1, 1, 1, 1, 0.57504517, 0.62548137, 0.9566385, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ya4ey"]
+gradient = SubResource("Gradient_g2els")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="player" type="CharacterBody2D" unique_id=1083520140 groups=["player"]]
 y_sort_enabled = true
 collision_layer = 2
+up_direction = Vector2(-0.9901446, -0.14004874)
 script = ExtResource("1_3vyb7")
-current_speed = null
-base_speed = null
-sprint_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1376941726]
 position = Vector2(0, -15)
@@ -226,6 +233,8 @@ vframes = 6
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=239731482]
 texture_filter = 1
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=466970393]
 position = Vector2(0, -9)
@@ -239,3 +248,10 @@ tree_root = SubResource("AnimationNodeStateMachine_3vyb7")
 anim_player = NodePath("../AnimationPlayer")
 parameters/idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1037735691]
+position = Vector2(-1, -14.000001)
+scale = Vector2(3.2670455, 3.187145)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ya4ey")
+texture_scale = 0.22

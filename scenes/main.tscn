@@ -1036,9 +1036,6 @@ y_sort_enabled = true
 texture_filter = 1
 position = Vector2(373.99442, 228.02441)
 scale = Vector2(4, 4)
-current_speed = 400
-base_speed = 400
-sprint_speed = 550
 
 [node name="walls" type="TileMapLayer" parent="y-sort" unique_id=1216736267]
 y_sort_enabled = true
@@ -1120,3 +1117,6 @@ script = ExtResource("7_o6xl0")
 position = Vector2(450.06833, -175.74152)
 shape = SubResource("RectangleShape2D_choun")
 script = ExtResource("7_o6xl0")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=502013968]
+color = Color(0.20942885, 0.20942888, 0.20942888, 1)
