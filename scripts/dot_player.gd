@@ -16,5 +16,5 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 
-func _input(_event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	input_dir = Input.get_vector("left", "right", "up", "down")

@@ -6,6 +6,8 @@ class_name Player
 @export var base_speed: int = 400
 @export var sprint_speed: int = 550
 
+@export var phone = "/PhoneSubViewportContainer"
+
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var animation_playback: AnimationNodeStateMachinePlayback = $AnimationTree["parameters/playback"]
 
@@ -13,10 +15,21 @@ const IS_MOVING = "parameters/conditions/is_moving"
 
 var last_direction := Vector2.DOWN
 var input_dir: Vector2
+var is_phone_open: bool = false
 
 func _ready() -> void:
 	animation_tree.set_active(true)
 	animation_playback.travel("idle")
+	
+	if phone:
+		phone.phone_toggled.connect(_on_phone_toggled)
+
+
+func _on_phone_toggled(open: bool) -> void:
+	is_phone_open = open
+	if is_phone_open:
+		input_dir = Vector2.ZERO
+
 
 func _physics_process(_delta: float) -> void:
 	if input_dir.length_squared() > 0.01:
@@ -45,5 +58,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 
-func _unhandled_key_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
+	if is_phone_open:
+		return
 	input_dir = Input.get_vector("left", "right", "up", "down")

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://05j133viwcy" path="res://interaction/interaction area/interactionArea.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://cp4wekc4b2bk" path="res://scripts/bedroom_door.gd" id="4_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bqh3sjxc27dgs" path="res://scenes/minigame_1.tscn" id="5_choun"]
+[ext_resource type="Script" uid="uid://cqvss0n7untj8" path="res://scenes/phone_sub_viewport_container.gd" id="6_eb6dy"]
 [ext_resource type="Script" uid="uid://jabi4qet686c" path="res://scripts/master_bedroom_door.gd" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://dvdolwnunmohh" path="res://scripts/bathroom_door.gd" id="7_o6xl0"]
 
@@ -1050,6 +1051,8 @@ offset_left = -74.498604
 offset_top = -42.506104
 offset_right = 75.501396
 offset_bottom = 47.493896
+mouse_filter = 0
+script = ExtResource("6_eb6dy")
 
 [node name="PhoneSubViewport" type="SubViewport" parent="y-sort/player/PhoneSubViewportContainer" unique_id=2028277008]
 handle_input_locally = false
